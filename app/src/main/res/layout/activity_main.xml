@@ -21,7 +21,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2">
+        android:layout_weight="1.38">
 
         <TextView
             android:layout_width="wrap_content"
@@ -37,14 +37,57 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:text="Name"
             android:ems="10"
             android:id="@+id/editText_name"
+            android:textSize="24dp"
+            android:hint="please enter your name"
             android:layout_below="@+id/textView_pokeman1"
+            android:layout_centerHorizontal="true" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/RadioGroup_optionGroup"
+            android:layout_alignParentBottom="false"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="53dp"
-            android:textSize="24dp" />
+            android:layout_below="@+id/editText_name"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentLeft="false">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="小火龍"
+                android:id="@+id/radioButton"
+                android:layout_gravity="center_horizontal"
+                android:checked="true" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="傑尼龜"
+                android:id="@+id/radioButton2"
+                android:layout_gravity="center_horizontal"
+                android:checked="false" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="廟花種子"
+                android:id="@+id/radioButton3"
+                android:layout_gravity="center_horizontal"
+                android:checked="false" />
+        </RadioGroup>
 
     </RelativeLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="確認"
+        android:id="@+id/button_confirm"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp" />
 
 </LinearLayout>
