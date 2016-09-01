@@ -17,6 +17,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button confirmButton;
     String nameOfTheTrainer;
     int selectOptionIndex;
+    static final String[] pokemonNames={
+            "小火龍",
+            "傑尼龜",
+            "廟花種子"
+    };
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +47,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             int selectRadioButtonViewId=optionGrp.getCheckedRadioButtonId();
             View selectRadioButton=optionGrp.findViewById(selectRadioButtonViewId);
             selectOptionIndex=optionGrp.indexOfChild(selectRadioButton);
+
+            String welcomeMsg=String.format("你好,訓練家%s歡迎來到神奇寶貝的世界. 你的第一個夥伴是%s",
+                    nameOfTheTrainer,
+                    pokemonNames[selectOptionIndex]
+                    );
+            infoText.setText(welcomeMsg);
         }
     }
 }
